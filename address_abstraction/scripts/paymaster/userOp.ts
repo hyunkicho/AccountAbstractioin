@@ -9,8 +9,6 @@ import { ecsign, toRpcSig, keccak256 as keccak256_buffer } from 'ethereumjs-util
 import { UserOperation } from './helper/UserOperation';
 import { ethers } from 'hardhat';
 
-const ERC20Address = "0xbfD96691448a6C4cC626887E73Da26fA072Ee75f";
-
 function encode (typevalues: Array<{ type: string, val: any }>, forSignature: boolean): string {
   const types = typevalues.map(typevalue => typevalue.type === 'bytes' && forSignature ? 'bytes32' : typevalue.type)
   const values = typevalues.map((typevalue) => typevalue.type === 'bytes' && forSignature ? keccak256(typevalue.val) : typevalue.val)
