@@ -6,15 +6,15 @@ import {
   parseEther
 } from 'ethers/lib/utils'
 import { BigNumber, BigNumberish, Contract, ContractReceipt, Signer, Wallet } from 'ethers'
-// import {
-//   EntryPoint,
-//   EntryPoint__factory,
-//   IERC20,
-//   IEntryPoint,
-//   SimpleAccount,
-//   SimpleAccountFactory__factory,
-//   SimpleAccount__factory, SimpleAccountFactory, TestAggregatedAccountFactory
-// } from '../typechain'
+import {
+  EntryPoint,
+  EntryPoint__factory,
+  IERC20,
+  IEntryPoint,
+  SimpleAccount,
+  SimpleAccountFactory__factory,
+  SimpleAccount__factory, SimpleAccountFactory, TestAggregatedAccountFactory
+} from '../typechain'
 import { BytesLike } from '@ethersproject/bytes'
 import { expect } from 'chai'
 import { Create2Factory } from '../src/Create2Factory'

@@ -6,7 +6,7 @@ import {
 } from 'ethers/lib/utils'
 import { BigNumber, Contract, Signer, Wallet } from 'ethers'
 import { ecsign, toRpcSig, keccak256 as keccak256_buffer } from 'ethereumjs-util'
-import { UserOperation } from './helper/UserOperation';
+import { UserOperation } from '../helper/UserOperation';
 import { ethers } from 'hardhat';
 
 function encode (typevalues: Array<{ type: string, val: any }>, forSignature: boolean): string {

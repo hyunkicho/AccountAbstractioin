@@ -9,7 +9,8 @@ import { AddressZero, callDataCost, rethrow } from './testutils'
 import { ecsign, toRpcSig, keccak256 as keccak256_buffer } from 'ethereumjs-util'
 import { UserOperation } from '../helper/UserOperation';
 import { EntryPoint } from '../../typechain-types/contracts/core/EntryPoint';
-const Create2Factory = "0x77Bbcdaa4956DdD2C22140220467D36f3C145608";
+
+
 function encode (typevalues: Array<{ type: string, val: any }>, forSignature: boolean): string {
   const types = typevalues.map(typevalue => typevalue.type === 'bytes' && forSignature ? 'bytes32' : typevalue.type)
   const values = typevalues.map((typevalue) => typevalue.type === 'bytes' && forSignature ? keccak256(typevalue.val) : typevalue.val)
